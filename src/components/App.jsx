@@ -55,15 +55,17 @@ class App extends Component {
 
   render() {
     const visibleContact = this.getFilterContact();
+    const { addContact, changeFilter, deleteContact } = this;
+    const { filter } = this.state;
     return (
       <div className="container">
         <h1 className="title">Phonebook</h1>
-        <ContactForm addContact={this.addContact}></ContactForm>
+        <ContactForm addContact={addContact}></ContactForm>
         <h2 className="subtitle">Contacts</h2>
-        <Filter value={this.state.filter} onChange={this.changeFilter}></Filter>
+        <Filter value={filter} onChange={changeFilter}></Filter>
         <ContactList
           contacts={visibleContact}
-          onDeleteContact={this.deleteContact}
+          onDeleteContact={deleteContact}
         ></ContactList>
       </div>
     );

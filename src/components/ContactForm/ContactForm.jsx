@@ -26,14 +26,16 @@ class ContactForm extends Component {
   };
 
   render() {
+    const { name, number } = this.state;
+    const { handleSubmit,handleChange } = this;
     return (
-      <form onSubmit={this.handleSubmit} className={css.form}>
+      <form onSubmit={handleSubmit} className={css.form}>
         <label className={css.formLable}>
           Name
           <input
             className={css.formInput}
-            value={this.state.name}
-            onChange={this.handleChange}
+            value={name}
+            onChange={handleChange}
             type="text"
             name="name"
             pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -45,8 +47,8 @@ class ContactForm extends Component {
           Number
           <input
             className={css.formInput}
-            value={this.state.number}
-            onChange={this.handleChange}
+            value={number}
+            onChange={handleChange}
             type="tel"
             name="number"
             pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
