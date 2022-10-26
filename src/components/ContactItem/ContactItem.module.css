@@ -1,0 +1,29 @@
+.contactItem {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contactItem:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.contactText {
+    margin-right: 25px;
+}
+
+.contactBtn {
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #6a79a6;
+    font-weight: 700;
+    cursor: pointer;
+    width: 60px;
+    height: 40px;
+}
+
+.contactBtn:hover {
+    border: 2px solid #6a79a6;
+    color: #fff;
+}
